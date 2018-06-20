@@ -1,0 +1,95 @@
+$primary-color: #4266f7;
+$secondary-color: #60bc60;
+$danger-color: #ff6d85;
+@import './_sizing';
+@import './_header';
+@import './_dashboard';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(247, 247, 247);
+  color: rgb(48, 48, 48);
+}
+
+.color-primary {
+  color: $primary-color;
+}
+
+.color-secondary {
+  color: $secondary-color;
+}
+
+.color-danger {
+  color: $danger-color;
+}
+
+.color-default {
+  color: #9b9b9b;
+}
+
+.icon-middle {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.dashboardCard {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 30px -15px blue;
+  padding: 20px 30px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.font-xs {
+  font-size: 12px;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md {
+  font-size: 16px;
+}
+
+.cashFlow__title {
+  font-size: 14px;
+}
+
+.cashFlow__value {
+  font-size: 40px;
+  margin: 0;
+}
+
+.dashboard__revenue {
+  color: #7dd67d;
+}
+
+.dashboard__cost {
+  color: #ff6d85;
+}
+
+.dashboard__income {
+  color: #4266f7;
+}

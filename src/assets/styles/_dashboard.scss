@@ -1,0 +1,59 @@
+.transactionItem {
+  display: flex;
+  border-top: 1px solid #eee;
+  align-items: center;
+  padding: 10px 0;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.transactionItem__icon {
+  flex-basis: 50px
+}
+
+.transactionItem__website {
+  font-size: 14px;
+  color: #ababab;
+  flex: 2;
+  text-align: center;
+}
+
+.transactionItem__value {
+  flex: 1;
+  text-align: right;
+}
+
+.transactionItem__fluctuation {
+  flex: 1;
+  text-align: right;
+}
+
+// .transactionItem__tooltip {
+//   font-size: 16px;
+// }
+.latestOrderItem {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 10px 0;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.latestOrderItem__image {
+  max-width: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.latestOrderItem__mid {
+  flex: 3;
+  padding: 0 10px;
+}
+
+.latestOrderItem__right {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
