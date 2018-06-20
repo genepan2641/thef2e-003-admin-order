@@ -123,11 +123,14 @@ export default {
             colors: ['#7dd67d', '#4266f7', '#ff6d85'],
             interval: '',
             intervalOptions: [{
-                title: 'week',
-                value: 'week'
+                title: 'weekly',
+                value: 'weekly'
             }, {
-                title: 'month',
-                value: 'month'
+                title: 'monthly',
+                value: 'monthly'
+            }, {
+                title: 'yearly',
+                value: 'yearly'
             }],
             chartData: {
                 columns: ['date', 'revenue', 'cost', 'net income'],

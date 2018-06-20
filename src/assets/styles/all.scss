@@ -5,6 +5,7 @@ $danger-color: #ff6d85;
 @import './_header';
 @import './_dashboard';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import './_element_variables';
 * {
   box-sizing: border-box;
 }
