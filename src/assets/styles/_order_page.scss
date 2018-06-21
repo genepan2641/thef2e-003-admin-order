@@ -1,6 +1,6 @@
 .orderProductList {
   padding: 10px 0;
   &:not(:first-child) {
-    border-top: 1px solid #eee;
+    border-top: 1px solid lighten($primary-color, 30%);
   }
 }

@@ -23,6 +23,7 @@ export default {
   },
   created() {
     this.$store.commit('CREATE_FAKE_ORDER_LIST');
+    this.$store.commit('CREATE_FAKE_PRODUCT_LIST');
   },
   components: {
     'nav-header': Header

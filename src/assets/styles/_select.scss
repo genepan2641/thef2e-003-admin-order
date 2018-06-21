@@ -8,7 +8,8 @@
   }
 }
 
-.statusSelect-Paid {
+.statusSelect-Paid,
+.statusSelect-Published {
   .el-input__inner {
     background-color: $secondary-color;
   }
@@ -26,7 +27,8 @@
   }
 }
 
-.statusSelect-Unpaid {
+.statusSelect-Unpaid,
+.statusSelect-Unpublished {
   .el-input__inner {
     background-color: darkgray;
   }

@@ -1,0 +1,11 @@
+.productListItem__img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.sizeListItem {
+  &:not(:first-child) {
+    padding-top: 10px;
+    border-top: 1px solid lighten($primary-color, 30%);
+  }
+}
