@@ -1,0 +1,33 @@
+.statusSelect {
+  .el-input__inner {
+    color: white !important;
+    font-weight: bold;
+  }
+  .el-select__caret {
+    color: white !important;
+  }
+}
+
+.statusSelect-Paid {
+  .el-input__inner {
+    background-color: $secondary-color;
+  }
+}
+
+.statusSelect-Shipping {
+  .el-input__inner {
+    background-color: $warning-color;
+  }
+}
+
+.statusSelect-Done {
+  .el-input__inner {
+    background-color: $primary-color;
+  }
+}
+
+.statusSelect-Unpaid {
+  .el-input__inner {
+    background-color: darkgray;
+  }
+}

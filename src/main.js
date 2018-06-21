@@ -13,8 +13,10 @@ import Vchart from 'v-charts';
 Vue.use(Vchart);
 
 /* eslint-disable no-new */
+import store from './store';
 new Vue({
   el: '#app',
+  store,
   router,
   components: {
     App

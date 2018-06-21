@@ -21,19 +21,19 @@
             <div class="col-md-4 mT10">
                 <div class="dashboardCard">
                     <p class="cashFlow__title text-center"><i class="mR10 icon-middle fas fa-hand-holding-usd"></i>TOTAL REVENUE</p>
-                    <p class="cashFlow__value text-center dashboard__revenue">54540</p>
+                    <p class="cashFlow__value text-center dashboard__revenue">{{ 54540 | numFormat }}</p>
                 </div>
             </div>
             <div class="col-md-4 mT10">
                 <div class="dashboardCard">
                     <p class="cashFlow__title text-center"><i class="mR10 icon-middle fas fa-boxes"></i>TOTAL COST</p>
-                    <p class="cashFlow__value text-center dashboard__cost">12660</p>
+                    <p class="cashFlow__value text-center dashboard__cost">{{ 12660 | numFormat }}</p>
                 </div>
             </div>
             <div class="col-md-4 mT10">
                 <div class="dashboardCard">
                     <p class="cashFlow__title text-center"><i class="mR10 icon-middle fas fa-money-bill-alt"></i>NET INCOME</p>
-                    <p class="cashFlow__value text-center dashboard__income">41880</p>
+                    <p class="cashFlow__value text-center dashboard__income">{{ 41880 | numFormat }}</p>
                 </div>
             </div>
         </div>
@@ -53,36 +53,36 @@
                         <div class="transactionItem">
                             <div class="transactionItem__icon"><i class="fa-facebook fab fa-3x"></i></div>
                             <p class="transactionItem__website m0">Facebook.com</p>
-                            <p class="transactionItem__value m0">45836</p>
+                            <p class="transactionItem__value m0">{{ 45836 | numFormat }}</p>
                             <el-tooltip effect="dark" placement="top">
-                                <div slot="content" class="text-center"><span class="font-md">INCREASE <span class="color-secondary">899</span> VIEW</span><br/><span class="font-sm">last week 44,937</span></div>
+                                <div slot="content" class="text-center"><span class="font-md">INCREASE <span class="color-secondary">899</span> VIEW</span><br/><span class="font-sm">last week {{ 44937 | numFormat }}</span></div>
                                 <p class="transactionItem__fluctuation color-secondary m0"><i class="fas fa-arrow-up"></i>20%</p>
                             </el-tooltip>
                         </div>
                         <div class="transactionItem">
                             <div class="transactionItem__icon"><i class="fa-google fab fa-3x"></i></div>
                             <p class="transactionItem__website m0">google.com</p>
-                            <p class="transactionItem__value m0">23582</p>
+                            <p class="transactionItem__value m0">{{ 23582 | numFormat }}</p>
                             <el-tooltip effect="dark" content="test" placement="top">
-                                <div slot="content" class="text-center"><span class="font-md">INCREASE <span class="color-secondary">899</span> VIEW</span><br/><span class="font-sm">last week 44,937</span></div>
+                                <div slot="content" class="text-center"><span class="font-md">INCREASE <span class="color-secondary">899</span> VIEW</span><br/><span class="font-sm">last week {{ 44937 | numFormat }}</span></div>
                                 <p class="transactionItem__fluctuation color-secondary m0"><i class="fas fa-arrow-up"></i>12%</p>
                             </el-tooltip>
                         </div>
                         <div class="transactionItem">
-                            <div class="transactionItem__icon"><i class="fa-wordpress-simple fab fa-3x"></i></div>
+                            <div class="transactionItem__icon"><i class="fa-wordpress fab fa-3x"></i></div>
                             <p class="transactionItem__website m0">wordpress.com</p>
-                            <p class="transactionItem__value m0">2489</p>
+                            <p class="transactionItem__value m0">{{ 2489 | numFormat }}</p>
                             <el-tooltip effect="dark" content="test" placement="top">
-                                <div slot="content" class="text-center"><span class="font-md">DECREASE <span class="color-danger">899</span> VIEW</span><br/><span class="font-sm">last week 44,937</span></div>
+                                <div slot="content" class="text-center"><span class="font-md">DECREASE <span class="color-danger">899</span> VIEW</span><br/><span class="font-sm">last week {{ 44937 | numFormat }}</span></div>
                                 <p class="transactionItem__fluctuation color-danger m0"><i class="fas fa-arrow-down"></i>15%</p>
                             </el-tooltip>
                         </div>
                         <div class="transactionItem">
                             <div class="transactionItem__icon"><i class="fa-medium fab fa-3x"></i></div>
                             <p class="transactionItem__website m0">medium.com</p>
-                            <p class="transactionItem__value m0">1057</p>
+                            <p class="transactionItem__value m0">{{ 1057 | numFormat }}</p>
                             <el-tooltip effect="dark" content="test" placement="top">
-                                <div slot="content" class="text-center"><span class="font-md">DECREASE <span class="color-danger">899</span> VIEW</span><br/><span class="font-sm">last week 44,937</span></div>
+                                <div slot="content" class="text-center"><span class="font-md">DECREASE <span class="color-danger">899</span> VIEW</span><br/><span class="font-sm">last week {{ 44937 | numFormat }}</span></div>
                                 <p class="transactionItem__fluctuation color-danger m0"><i class="fas fa-arrow-down"></i>30%</p>
                             </el-tooltip>
                         </div>
@@ -104,7 +104,7 @@
                             <div class="latestOrderItem__right">
                                 <div>
                                     <p class="font-xs text-right mB5">TOTAL</p>
-                                    <p class="font-md font-weight-bold text-right m0">${{ i.totalPrice }}</p>
+                                    <p class="font-md font-weight-bold text-right m0">${{ i.totalPrice | numFormat }}</p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,13 @@ export default {
                 imageUrl: faker.image.avatar()
             });
         }
-    }
+
+    },
+    filters: {
+        numFormat(val) {
+            return val.toString().replace(/(?=((?!\b)\d{3})+$)/g, ',');
+        }
+    },
 }
 </script>
 

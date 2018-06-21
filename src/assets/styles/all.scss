@@ -1,9 +1,12 @@
 $primary-color: #4266f7;
 $secondary-color: #60bc60;
 $danger-color: #ff6d85;
+$warning-color: #fe8150;
 @import './_sizing';
 @import './_header';
+@import './_select';
 @import './_dashboard';
+@import './_order_page';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import './_element_variables';
 * {
@@ -55,6 +58,10 @@ body {
   border-radius: 5px;
   box-shadow: 0px 5px 30px -15px blue;
   padding: 20px 30px;
+}
+
+.dashboardCard-shadow {
+  box-shadow: 0px 5px 30px -15px blue;
 }
 
 .title {
