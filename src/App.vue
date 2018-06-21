@@ -21,6 +21,9 @@ export default {
     return {
     }
   },
+  created() {
+    this.$store.commit('CREATE_FAKE_ORDER_LIST');
+  },
   components: {
     'nav-header': Header
   }

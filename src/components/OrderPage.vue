@@ -1,6 +1,6 @@
 <template>
     <div class="mT20 mB30">
-        <el-select class="mR10" v-model="selectedStatus" @change="updateSelecedCol($event)">
+        <el-select class="mR10" v-model="selectedStatus" @change="updateSelecedCol($event)" placeholder="choose multiple">
             <el-option v-for="(sta, i) in statusSet" :value="sta" :key="i">{{ sta }}</el-option>
         </el-select>
 
@@ -72,7 +72,7 @@ export default {
 
     },
     created() {
-        this.$store.commit('CREATE_FAKE_ORDER_LIST');
+
     },
     methods: {
         statusSelect(status) {
