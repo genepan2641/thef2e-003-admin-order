@@ -1,5 +1,7 @@
 # w3-admin-order
 
+[Demo](https://genepan2641.github.io/thef2e-003-admin-order/#)
+
 > A Vue.js project
 
 ## Build Setup
